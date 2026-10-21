@@ -1,33 +1,53 @@
-```html
 <!DOCTYPE html>
 <html lang="rw">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Loman</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>🤖 Loman</h1>
+    <div class="chat-container">
 
-    <p>Muraho! Ndi Loman.</p>
-    <p>Nakumva kandi nkagusubiza mu Kinyarwanda.</p>
+        <header class="chat-header">
+            <h1>🤖 Loman</h1>
+            <p>AI yawe mu Kinyarwanda</p>
+        </header>
 
-    <input
-        type="text"
-        id="question"
-        placeholder="Andika ikibazo cyawe..."
-    >
+        <main id="chat-box" class="chat-box">
 
-    <button onclick="sendMessage()">Ohereza</button>
+            <div class="message loman-message">
+                <strong>Loman:</strong>
+                <p>Muraho! Ndi Loman. Nakumva kandi nkagusubiza mu Kinyarwanda. 👋</p>
+            </div>
 
-    <button>🎤</button>
+        </main>
 
-    <div id="response"></div>
+        <div class="input-area">
+
+            <input
+                type="text"
+                id="question"
+                placeholder="Andika ikibazo cyawe..."
+            >
+
+            <button onclick="sendMessage()">
+                Ohereza
+            </button>
+
+            <button class="voice-button">
+                🎤
+            </button>
+
+        </div>
+
+    </div>
 
     <script src="script.js"></script>
 
 </body>
 </html>
-```
