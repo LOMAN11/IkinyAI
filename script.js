@@ -8,7 +8,7 @@ function sendMessage() {
         return;
     }
 
-    // Ubutumwa bw'umukoresha
+    // Ubutumwa bwawe
     const userMessage = document.createElement("div");
     userMessage.className = "message user-message";
 
@@ -19,7 +19,7 @@ function sendMessage() {
 
     chatBox.appendChild(userMessage);
 
-    // Igisubizo cya Loman kuri ubu
+    // Igisubizo cya Loman
     const lomanMessage = document.createElement("div");
     lomanMessage.className = "message loman-message";
 
@@ -30,9 +30,7 @@ function sendMessage() {
 
     chatBox.appendChild(lomanMessage);
 
-    // Gusiba aho ikibazo cyanditswe
     input.value = "";
 
-    // Kumanura chat hasi
     chatBox.scrollTop = chatBox.scrollHeight;
 }
