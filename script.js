@@ -1,14 +1,38 @@
-```javascript
 function sendMessage() {
-    const question = document.getElementById("question").value;
-    const response = document.getElementById("response");
+    const input = document.getElementById("question");
+    const chatBox = document.getElementById("chat-box");
 
-    if (question.trim() === "") {
-        response.innerText = "Andika ikibazo mbere yo kohereza.";
+    const question = input.value.trim();
+
+    if (question === "") {
         return;
     }
 
-    response.innerText =
-        "Murakoze! Nabonye ikibazo cyawe: " + question;
+    // Ubutumwa bw'umukoresha
+    const userMessage = document.createElement("div");
+    userMessage.className = "message user-message";
+
+    userMessage.innerHTML = `
+        <strong>Wowe:</strong>
+        <p>${question}</p>
+    `;
+
+    chatBox.appendChild(userMessage);
+
+    // Igisubizo cya Loman kuri ubu
+    const lomanMessage = document.createElement("div");
+    lomanMessage.className = "message loman-message";
+
+    lomanMessage.innerHTML = `
+        <strong>Loman:</strong>
+        <p>Nabonye ikibazo cyawe. 🤖 AI nyayo turayongeramo vuba!</p>
+    `;
+
+    chatBox.appendChild(lomanMessage);
+
+    // Gusiba aho ikibazo cyanditswe
+    input.value = "";
+
+    // Kumanura chat hasi
+    chatBox.scrollTop = chatBox.scrollHeight;
 }
-```
